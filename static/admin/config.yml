@@ -1,0 +1,335 @@
+backend:
+  name: git-gateway
+
+media_folder: "static/uploads" # Folder where user uploaded files should go
+public_folder: "uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "sign_up" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Sign Up" # Used in the UI, ie.: "New Post"
+    folder: "content/post" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", hint: "e.g., Juana Dela Cruz - Virtual Assistant."}
+      
+      - {label: "Draft", name: "draft", widget: "hidden", default: true}
+      
+      - label: "About"
+        name: "about"
+        widget: "object"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Address", name: "adress", widget: "string"}
+          - {label: "Role", name: "role", widget: "string", hint: "e.g., Virtual Assistant."}
+          - label: "Organizations"
+            name: "organizations"
+            widget: "object"
+            fields:
+              - label: "Organization"
+                name: "org_one"
+                widget: "object"
+                fields:
+                  - {label: "Name", name: "org_1", widget: "string", hint: "e.g., FreeLancers In the Philippines."}
+                  - {label: "URL", name: "org_url_1", widget: "string", hint: "e.g., https://www.facebook.com/groups/wfhr.io/"}
+              - label: "Organization"
+                name: "org_two"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Name", name: "org_2", widget: "string", required: false}
+                  - {label: "URL", name: "org_url_2", widget: "string", required: false}
+              - label: "Organization"
+                name: "org_three"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Name", name: "org_3", widget: "string", required: false}
+                  - {label: "URL", name: "org_url_3", widget: "string", required: false}
+          - {label: "Interests", name: "interests", widget: "string", hint: "e.g Content Marketing, Data Visualization, and Interactive Learning."}
+          - label: "Biography"
+            name: "biography"
+            widget: "object"
+            fields:
+              - {label: "Short Bio", name: "short_bio", widget: "string", hint: "Displayed in user profile at end of posts.", required: false}
+              - {label: "Bio", name: "bio", widget: "markdown", hint: "e.g., I am a virtual assistant who has been working behind the scenes for the past 9 years. I work with coaches, internet marketers, speakers etc. to help them build their businesses. I free up their time so that they can do what they do best, while I do what I do best, which is ensuring the back end of their business runs smoothly and efficiently. I love strategizing with my clients and showing them how to rock their businesses to the core! I am always ready for new challenges and meet them head-on."}
+      
+      - label: "Education"
+        name: "education"
+        widget: "object"
+        fields:
+          - label: "Education"
+            name: "education_one"
+            widget: "object"
+            fields:
+              - {label: "Course", name: "course_one", widget: "string", hint: "e.g., Bachelor of Science in Business Administration."}
+              - {label: "Institution", name: "institution_one", widget: "string", hint: "e.g., University of the Philippines."}
+              - {label: "Year", name: "year_one", widget: "string", hint: "YYYY"}
+          - label: "Education"
+            name: "education_two"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Course", name: "course_two", widget: "string", required: false}
+              - {label: "Institution", name: "institution_two", widget: "string", required: false}
+              - {label: "Year", name: "year_two", widget: "string", required: false}
+          - label: "Education"
+            name: "education_three"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Course", name: "course_three", widget: "string", required: false}
+              - {label: "Institution", name: "institution_three", widget: "string", required: false}
+              - {label: "Year", name: "year_three", widget: "string", required: false}
+      
+      - label: "Skills"
+        name: "skills"
+        widget: "object"
+        fields:
+          - label: "Skill"
+            name: "skills_one"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "skill_one", widget: "string", hint: "e.g., Email Management."}
+              - {label: "Description", name: "description_one", widget: "string", hint: "e.g., Filtering, prioritizing, and delegating, your client's email to 'Inbox Zero'."}
+          - label: "Skill"
+            name: "skills_two"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "skill_two", widget: "string", hint: "e.g., Social Media Management."}
+              - {label: "Description", name: "description_two", widget: "string", hint: "e.g., Maximizing a business' use of social media to communicate with customers effectively."}
+          - label: "Skill"
+            name: "skills_three"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "skill_three", widget: "string", hint: "e.g., Website Updates."}
+              - {label: "Description", name: "description_three", widget: "string", hint: "e.g., Getting new and updated information on your client's websites without taking down the internet."}
+          - label: "Skill"
+            name: "skills_four"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Name", name: "skill_four", widget: "string", required: false}
+              - {label: "Description", name: "description_four", widget: "string", required: false}
+          - label: "Skill"
+            name: "skills_five"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Name", name: "skill_five", widget: "string", required: false}
+              - {label: "Description", name: "description_five", widget: "string", required: false}
+          - label: "Skill"
+            name: "skills_six"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Name", name: "skill_six", widget: "string", required: false}
+              - {label: "Description", name: "description_six", widget: "string", required: false}
+          - label: "Skill"
+            name: "skills_seven"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Name", name: "skill_seven", widget: "string", required: false}
+              - {label: "Description", name: "description_seven", widget: "string", required: false}
+          - label: "Skill"
+            name: "skills_eight"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Name", name: "skill_eight", widget: "string", required: false}
+              - {label: "Description", name: "description_eight", widget: "string", required: false}
+          - label: "Skill"
+            name: "skills_nine"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Name", name: "skill_nine", widget: "string", required: false}
+              - {label: "Description", name: "description_nine", widget: "string", required: false}
+      
+      - label: "Accomplishments"
+        name: "accomplishments"
+        widget: "object"
+        fields:
+          - label: "Accomplishment"
+            name: "accomplishments_one"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title_one", widget: "string", hint: "e.g., Virtual Assistant Bootcamp."}
+              - {label: "Organization", name: "organization_one", widget: "string", hint: "e.g., FreeLancers In the Philippines."}
+              - {label: "Certification URL", name: "certification_url_one", widget: "string", hint: "e.g https://info.credly.com/juanadelacruz/"}
+              - {label: "Date Start", name: "date_start_one", widget: "string", hint: "MMM DD, YYYY"}
+              - {label: "Date End", name: "date_end_one", widget: "string", hint: "MMM DD, YYYY"}
+              - {label: "Description", name: "description_ten", widget: "string", hint: "e.g., Bootcamp for aspiring Filipino Virtual Assistants."}
+          - label: "Accomplishment"
+            name: "accomplishments_two"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_two", widget: "string", required: false}
+              - {label: "Organization", name: "organization_two", widget: "string", required: false}
+              - {label: "Certification URL", name: "certification_url_two", widget: "string", required: false}
+              - {label: "Date Start", name: "date_start_two", widget: "string", required: false}
+              - {label: "Date End", name: "date_end_two", widget: "string", required: false}
+              - {label: "Description", name: "description_eleven", widget: "string", required: false}
+          - label: "Accomplishment"
+            name: "accomplishments_three"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_three", widget: "string", required: false}
+              - {label: "Organization", name: "organization_three", widget: "string", required: false}
+              - {label: "Certification URL", name: "certification_url_three", widget: "string", required: false}
+              - {label: "Date Start", name: "date_start_three", widget: "string", required: false}
+              - {label: "Date End", name: "date_end_three", widget: "string", required: false}
+              - {label: "Description", name: "description_twelve", widget: "string", required: false}
+      
+      - label: "Experience"
+        name: "experience"
+        widget: "object"
+        fields:
+          - label: "Experience"
+            name: "experience_one"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title_four", widget: "string", hint: "e.g., Virtual Assistant."}
+              - {label: "Company", name: "company_one", widget: "string", hint: "e.g., Plantstar"}
+              - {label: "Company_URL", name: "company_url_one", widget: "string", hint: "e.g., https://www.plantstar.com/", required: false}
+              - {label: "Date Start", name: "date_start_four", widget: "string", hint: "MMM DD, YYYY"}
+              - {label: "Date End", name: "date_end_four", widget: "string", hint: "MMM DD, YYYY"}
+              - {label: "Description", name: "description_thirteen", widget: "string", hint: "e.g., Plantstar is a new concept restaurant for the Greater St. Louis area that provides a quick, healthy, plant-based alternative to the normal fast casual dining experience. As a consultant to the founder, I helped in all areas necessary to launching the company including creation of brand material and standards, menu development, market research, pricing, and marketing strategy."}
+          - label: "Experience"
+            name: "experience_two"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_five", widget: "string", required: false}
+              - {label: "Company", name: "company_two", widget: "string", required: false}
+              - {label: "Company_URL", name: "company_url_two", widget: "string", required: false}
+              - {label: "Date Start", name: "date_start_five", widget: "string", required: false}
+              - {label: "Date End", name: "date_end_five", widget: "string", required: false}
+              - {label: "Description", name: "description_forteen", widget: "string", required: false}
+          - label: "Experience"
+            name: "experience_three"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_six", widget: "string", required: false}
+              - {label: "Company", name: "company_three", widget: "string", required: false}
+              - {label: "Company_URL", name: "company_url_three", widget: "string", required: false}
+              - {label: "Date Start", name: "date_start_six", widget: "string", required: false}
+              - {label: "Date End", name: "date_end_six", widget: "string", required: false}
+              - {label: "Description", name: "description_fifteen", widget: "string", required: false}
+          - label: "Experience"
+            name: "experience_four"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_seven", widget: "string", required: false}
+              - {label: "Company", name: "company_four", widget: "string", required: false}
+              - {label: "Company_URL", name: "company_url_four", widget: "string", required: false}
+              - {label: "Date Start", name: "date_start_seven", widget: "string", required: false}
+              - {label: "Date End", name: "date_end_seven", widget: "string", required: false}
+              - {label: "Description", name: "description_sixteen", widget: "string", required: false}
+          - label: "Experience"
+            name: "experience_five"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_eight", widget: "string", required: false}
+              - {label: "Company", name: "company_five", widget: "string", required: false}
+              - {label: "Company_URL", name: "company_url_five", widget: "string", required: false}
+              - {label: "Date Start", name: "date_start_five", widget: "string", required: false}
+              - {label: "Date End", name: "date_end_eight", widget: "string", required: false}
+              - {label: "Description", name: "description_seventeen", widget: "string", required: false}
+              
+      - label: "Projects/Portfolio"
+        name: "projects"
+        widget: "object"
+        fields:
+          - label: "Project/Portfolio"
+            name: "project_one"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_nine", widget: "string", hint: "e.g., COBLOGGER", required: false}
+              - {label: "Date", name: "date_one", widget: "string", hint: "MMM DD, YYYY", required: false}
+              - {label: "Summary", name: "summary_one", widget: "string", hint: "e.g., Write, edit, and update blog articles and case studies for clarity, helpfulness, SEO, shareability, staying true to brand, and accuracy.", required: false}
+              - {label: "Tag", name: "tag_one", widget: "string", hint: "e.g., Content Marketing.", required: false}
+              - {label: "External Link", name: "external_link_one", widget: "string", hint: "e.g., https://www.coblogger.com/", required: false}
+              - {label: "Description", name: "description_eighteen", widget: "string", hint: "More details about the project/portfolio.", required: false}
+          - label: "Project/Portfolio"
+            name: "project_two"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_ten", widget: "string", required: false}
+              - {label: "Date", name: "date_two", widget: "string", required: false}
+              - {label: "Summary", name: "summary_two", widget: "string", required: false}
+              - {label: "Tag", name: "tag_two", widget: "string", required: false}
+              - {label: "External Link", name: "external_link_two", widget: "string", required: false}
+              - {label: "Description", name: "description_nineteen", widget: "string", required: false}
+          - label: "Project/Portfolio"
+            name: "project_three"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Title", name: "title_eleven", widget: "string", required: false}
+              - {label: "Date", name: "date_three", widget: "string", required: false}
+              - {label: "Summary", name: "summary_three", widget: "string", required: false}
+              - {label: "Tag", name: "tag_three", widget: "string", required: false}
+              - {label: "External Link", name: "external_link_three", widget: "string", required: false}
+              - {label: "Description", name: "description_twenty", widget: "string", required: false}
+      
+      - label: "Contact"
+        name: "contact"
+        widget: "object"
+        fields:              
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "number"}
+          - label: "Social Media"
+            name: "social_media"
+            widget: "object"
+            fields:
+              - {label: "Twitter Username", name: "twitter", widget: "string"}
+              - {label: "Facebook Username", name: "facebook", widget: "string"}
+              - {label: "Linkedin Username", name: "linkedin", widget: "string"}
+              - {label: "Google Plus Username", name: "google_plus", widget: "string"}
+              - {label: "Skype Username", name: "skype", widget: "string"}
+      
+      - label: "Website"
+        name: "website"
+        widget: "object"
+        fields:        
+          - {label: "Domain Name", name: "baseurl", widget: "string"}
+          - {label: "Title of Site", name: "title_of_site", widget: "string", hint: "The title meta tag is the most important element in the site optimization process. Many search engines pay particular attention to keywords that occur in the title tag. As well, search engines generally display the title tag's contents in their site listings."}
+          - {label: "Description", name: "description", widget: "string", hint: "The description meta tag defines site information a search engine displays when it lists the site. The description meta tag should concisely explain the nature and contents of the page."}
+          - label: "Color Theme"
+            name: "color_theme"
+            widget: "select"
+            hint: "View color themes at https://websiteforvas.com/#themes."
+            options: ["default", "ocean", "forest", "dark", "apogee", "1950s", "coffee", "cupcake"]
+          - label: "Reports"
+            name: "reports"
+            widget: "object"
+            fields:
+              - {label: "Google Analytics Tracking ID", name: "googleAnalytics", widget: "string", required: false}
+              - {label: "Disqus Shortname", name: "disqusShortname", widget: "string", required: false}
+          - label: "Advance Options"
+            name: "advance_options"
+            widget: "object"
+            fields:
+              - label: "Gravatar"
+                name: "gravatar"
+                widget: "select"
+                options: ["true", "false"]
+                required: false
+              - label: "Menu Align Right"
+                name: "menu_align_right"
+                widget: "select"
+                options: ["true", "false"]
+                required: false
+              - label: "Privacy Pack"
+                name: "privacy_pack"
+                widget: "select"
+                options: ["true", "false"]
