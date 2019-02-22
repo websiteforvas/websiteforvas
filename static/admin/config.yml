@@ -301,11 +301,10 @@ collections: # A list of collections the CMS should be able to edit
         name: "website"
         widget: "object"
         fields:        
-          - label: "Package"
-                name: "package"
-                widget: "select"
-                options: ["Basic", "Premium"]
-                required: false
+          - label: "Plan"
+            name: "plan"
+            widget: "select"
+            options: ["Basic", "Premium"]
           - {label: "Domain Name", name: "baseurl", widget: "string"}
           - {label: "Private eMail", name: "private_email", widget: "string"}
           - {label: "Title of Site", name: "title_of_site", widget: "string", hint: "The title meta tag is the most important element in the site optimization process. Many search engines pay particular attention to keywords that occur in the title tag. As well, search engines generally display the title tag's contents in their site listings."}
