@@ -14,7 +14,7 @@ weight = 20
   icon_pack = "fas"
   number = "01."
   name = "Submit A Brief"
-  description = "Fill out a brief form telling me about your virtual assistant website needs."
+  description = "Confirm invitation from your yourdomain.com/admin and fill out a brief form telling me about your virtual assistant website needs."
   
 [[feature]]
   icon = "box"

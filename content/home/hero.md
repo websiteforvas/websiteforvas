@@ -22,14 +22,14 @@ img = "screenshot.png"
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
-  url = "https://juanadelacruz.xyz/"
-  label = '<i class="fas fa-"></i> Demo'
+  url = "https://websiteforvas.com/admin/#/"
+  label = '<i class="fas fa-"></i> Get Started Today'
 +++
 Virtual Assistant Personal Website Made Easy.
 
-Showcase your Personality, Skills, Experiences, Blog, Portfolio and Accomplishments to Potential Clients and land the job. 
+Showcase your Personality, Skills, Experiences, Blog, Portfolio and Accomplishments to Potential Clients and land the job. [View the Demo!](https://juanadelacruz.xyz/) 
 
-Let's create your beautifully simple website powered by [Academic](https://sourcethemes.com/academic/), [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/) today.
+Let's create your beautifully simple website powered by [Academic](https://sourcethemes.com/academic/), [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/).
 
 <!--The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes :rocket:-->
 <!--The highly flexible website framework for Hugo with an extensible plugin mechanism.-->
