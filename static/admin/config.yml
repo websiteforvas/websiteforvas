@@ -305,8 +305,8 @@ collections: # A list of collections the CMS should be able to edit
             name: "plan"
             widget: "select"
             options: ["Basic", "Premium"]
-          - {label: "Domain Name", name: "baseurl", widget: "string"}
-          - {label: "Private eMail", name: "private_email", widget: "string"}
+          - {label: "Domain Name", name: "baseurl", widget: "string", hint: "e.g., juanadelacruz.com"}
+          - {label: "Private eMail", name: "private_email", widget: "string", hint: "e.g., hello@juanadelacruz.com, info@juanadelacruz.com, and contact@juanadelacruz.com."}
           - {label: "Title of Site", name: "title_of_site", widget: "string", hint: "The title meta tag is the most important element in the site optimization process. Many search engines pay particular attention to keywords that occur in the title tag. As well, search engines generally display the title tag's contents in their site listings."}
           - {label: "Description", name: "description", widget: "string", hint: "The description meta tag defines site information a search engine displays when it lists the site. The description meta tag should concisely explain the nature and contents of the page."}
           - label: "Color Theme"
