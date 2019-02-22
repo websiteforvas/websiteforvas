@@ -301,7 +301,13 @@ collections: # A list of collections the CMS should be able to edit
         name: "website"
         widget: "object"
         fields:        
+          - label: "Package"
+                name: "package"
+                widget: "select"
+                options: ["Basic", "Premium"]
+                required: false
           - {label: "Domain Name", name: "baseurl", widget: "string"}
+          - {label: "Private eMail", name: "private_email", widget: "string"}
           - {label: "Title of Site", name: "title_of_site", widget: "string", hint: "The title meta tag is the most important element in the site optimization process. Many search engines pay particular attention to keywords that occur in the title tag. As well, search engines generally display the title tag's contents in their site listings."}
           - {label: "Description", name: "description", widget: "string", hint: "The description meta tag defines site information a search engine displays when it lists the site. The description meta tag should concisely explain the nature and contents of the page."}
           - label: "Color Theme"
@@ -319,17 +325,17 @@ collections: # A list of collections the CMS should be able to edit
             name: "advance_options"
             widget: "object"
             fields:
-              - label: "Gravatar"
-                name: "gravatar"
+              - label: "Do you have a logo?"
+                name: "do_you_have_a_logo"
                 widget: "select"
-                options: ["true", "false"]
+                options: ["Yes", "No"]
                 required: false
-              - label: "Menu Align Right"
+              - label: "Menu Align Right?"
                 name: "menu_align_right"
                 widget: "select"
-                options: ["true", "false"]
+                options: ["Yes", "No"]
                 required: false
-              - label: "Privacy Pack"
-                name: "privacy_pack"
+              - label: "Activate Privacy Pack?"
+                name: "privacy_pack?"
                 widget: "select"
-                options: ["true", "false"]
+                options: ["Yes", "No"]
