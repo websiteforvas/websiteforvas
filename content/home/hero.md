@@ -27,7 +27,7 @@ img = "screenshot.png"
 +++
 Virtual Assistant Personal Website Made Easy.
 
-Showcase your Personality, Skills, Experiences, Blog, Portfolio and Accomplishments to Potential Clients and land the job. [View the Demo!](https://juanadelacruz.xyz/) 
+Showcase your Personality, Skills, Experience, Blog, Portfolio and Accomplishments to Potential Clients and land the job. [View the Demo!](https://juanadelacruz.xyz/) 
 
 Let's create your beautifully simple website powered by [Academic](https://sourcethemes.com/academic/), [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/).
 
