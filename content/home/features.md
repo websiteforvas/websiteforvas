@@ -3,7 +3,7 @@ widget = "featurette"
 active = true
 date = "2017-11-21"
 
-title = "Professional Web Service"
+title = "Professional Web Development Services"
 subtitle = "Enhance your image and make an impactful first impression in 4 simple steps…"
 
 # Order that this section will appear in.

@@ -12,7 +12,7 @@ day_night = false
 font = "default"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = "The website builder for Hugo. Create a beautifully simple site from Markdown in under 10 minutes."
+description = "Professional Web Development Services For Virtual Assistants."
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
 sharing_image = "screenshot.png"
