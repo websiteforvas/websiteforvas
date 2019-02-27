@@ -14,10 +14,10 @@ type = "pricing"  # Do not modify.
 website [**View Demo**](https://juanadelacruz.xyz/) 
 - 1 year .com custom domain
 - 1 year web hosting
-- 2 months free private email
+- 2 months private email
 - A [CMS](https://juanadelacruz.xyz/admin/) for blogging
 - Premium blog graphic assets
-- Favicon (initials)
+- Favicon
 - 1 revision request per month
 
 Price: **3,450 PHP / Year**
@@ -26,6 +26,6 @@ Price: **3,450 PHP / Year**
 
 - All basic features
 - Unlimited revision requests
-- 1 Year private email
+- 1 year private email
 
 Price: **6,990 PHP / Year**
