@@ -3,23 +3,23 @@
 #     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
 
-# [[main]]
-#   pre = "<i class=\"fas fa-book\" style=\"color: #007bff;\"></i>"
-#   name = "Documentation"
-#   url = "docs/"
-#   weight = 10
+[[main]]
+  # pre = "<i class=\"fas fa-book\" style=\"color: #007bff;\"></i>"
+  name = "Pricing"
+  url = "pricing/"
+  weight = 40
 
 [[main]]
   # pre = "<i class=\"fas fa-home\" style=\"color: #007bff;\"></i>"
   name = "Home"
   url = "#hero"
-  weight = 20
+  weight = 10
   
 [[main]]
   # pre = "<i class=\"fas fa-book\" style=\"color: #007bff;\"></i>"
   name = "Features"
   url = "#elements"
-  weight = 30
+  weight = 20
   
 # [[main]]
 #   # pre = "<i class=\"fas fa-book\" style=\"color: #007bff;\"></i>"
@@ -31,7 +31,7 @@
   # pre = "<i class=\"fas fa-book\" style=\"color: #007bff;\"></i>"
   name = "Expo"
   url = "#expo"
-  weight = 50
+  weight = 30
   
 [[main]]
   # pre = "<i class=\"fas fa-book\" style=\"color: #007bff;\"></i>"
@@ -89,37 +89,37 @@
 
 # Documentation 
 
-[[docs]]
-  name = "Overview"
+[[pricing]]
+  name = "Pricing"
   weight = 5
-  url = "/docs/"
+  url = "/pricing/"
 
-[[docs]]
-  name = "Setup"
-  weight = 10
-  identifier = "setup"
+# [[pricing]]
+#   name = "Basic"
+#   weight = 10
+#   identifier = "basic"
 
-[[docs]]
-  name = "Your Content"
-  weight = 20
-  identifier = "content"
+# [[pricing]]
+#   name = "Premium"
+#   weight = 20
+#   identifier = "premium"
 
-[[docs]]
-  name = "Deployment"
-  weight = 30
-  identifier = "deploy"
+# [[docs]]
+#   name = "Deployment"
+#   weight = 30
+#   identifier = "deploy"
 
-[[docs]]
-  name = "Migrate"
-  identifier = "migrate"
-  weight = 40
+# [[docs]]
+#   name = "Migrate"
+#   identifier = "migrate"
+#   weight = 40
 
-[[docs]]
-  name = "Contributing"
-  url = "/docs/contribute/"
-  weight = 50
+# [[docs]]
+#   name = "Contributing"
+#   url = "/docs/contribute/"
+#   weight = 50
 
-[[docs]]
-  name = "Troubleshooting"
-  weight = 60
-  url = "/docs/faq/"
+# [[docs]]
+#   name = "Troubleshooting"
+#   weight = 60
+#   url = "/docs/faq/"
